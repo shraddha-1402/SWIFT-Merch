@@ -13,3 +13,12 @@
 .input::placeholder {
   opacity: 0.6;
 }
+
+/* text utilities */
+.green-text {
+  color: var(--green);
+}
+
+.red-text {
+  color: var(--red);
+}

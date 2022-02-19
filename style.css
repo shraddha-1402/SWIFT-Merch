@@ -6,6 +6,7 @@
 @import "/Shared/common.css";
 @import "/Shared/layout.css";
 @import "/CSS/productListingPage.css";
+@import "/CSS/cart.css";
 
 .hero {
   display: grid;
