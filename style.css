@@ -3,3 +3,70 @@
 @import "https://fonts.gstatic.com";
 @import "https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400&display=swap";
 @import "/Shared/Navbar/navbar.css";
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.hero-heading-container {
+  width: 100%;
+  position: absolute;
+  top: 60%;
+  text-align: center;
+}
+
+.hero-heading {
+  color: var(--white);
+  font-size: 4em;
+  font-weight: 400;
+  text-shadow: 0 1px 0 #252525, 0 2px 0 #1d1d1d;
+}
+
+.overlay {
+  opacity: 0.5;
+  background-color: var(--black);
+}
+
+.mobile-hero {
+  display: none;
+}
+
+.featured-product-text {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem 0.75rem;
+  background-color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.card:hover .featured-product-text {
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1000px) {
+  .hero-heading {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    margin-top: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-heading {
+    font-size: 2em;
+  }
+
+  .desktop-hero {
+    display: none;
+  }
+
+  .mobile-hero {
+    display: grid;
+  }
+}
