@@ -1,0 +1,12 @@
+.grid-3-col-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 18rem));
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .grid-2-col {
+    justify-items: center;
+  }
+}
