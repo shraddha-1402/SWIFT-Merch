@@ -1,0 +1,62 @@
+@import "/style.css";
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-dropdown {
+  display: none;
+  top: 2rem;
+  left: -2rem;
+  width: 8rem;
+  padding: 0.5rem;
+  background-color: var(--white);
+  border: 1px solid var(--secondary-color);
+  border-radius: 0.25rem;
+}
+
+.nav-dropdown-item {
+  width: 100%;
+  text-align: center;
+  margin: 0.25rem 0;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.nav-dropdown-item:hover {
+  background-color: var(--secondary-color);
+}
+
+@media (max-width: 700px) {
+  .header {
+    box-shadow: none;
+    border: 1px solid var(--secondary-color);
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .nav-menu {
+    gap: 0.25rem;
+  }
+
+  .nav-search-bar {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    border-radius: 0;
+    border: 1px solid var(--secondary-color);
+    width: 100%;
+  }
+
+  .nav-dropdown {
+    left: -3.5rem;
+  }
+}

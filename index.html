@@ -4,12 +4,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <script defer src="/Shared/Navbar/navbar.js"></script>
+  <script defer src="https://kit.fontawesome.com/f08ee55cc8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/style.css">
   <title>Swift Merch</title>
 </head>
 
 <body>
-  <h1>A Taylor Swift Merchandise Store</h1>
+  <nav class="pos-sticky-t0 z-1">
+    <div class="nav pos-rel">
+      <a class="link flex-row align-center" href="/">
+        <h1 class="nav-heading primary-text">Swift Merch</h1>
+      </a>
+      <ul class="ml-auto list-style-none nav-menu">
+        <div class="nav-search-bar">
+          <input type="search" name="search" id="search-products" class="nav-search-input"
+            placeholder="search products">
+          <button class="nav-search-btn">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+
+        <div class="pos-rel">
+          <a href="#" class="link nav-dropdown-link">
+            <li class="nav-link desktop-nav">Account</li>
+            <li class="fas fa-user icon small-icon nav-dropdown-link mobile-nav"></li>
+          </a>
+          <div class="nav-dropdown pos-abs">
+            <ul class="list-style-none">
+              <a href="/Login/" class="link">
+                <li class="nav-dropdown-item">Profile</li>
+              </a>
+              <a href="/Login/" class="link">
+                <li class="nav-dropdown-item">Login</li>
+              </a>
+              <a href="/Login/" class="link">
+                <li class="nav-dropdown-item">Logout</li>
+              </a>
+            </ul>
+          </div>
+        </div>
+        <a href="/Wishlist/" class="link">
+          <li class="nav-link desktop-nav">Wishlist</li>
+          <li class="fa fa-heart icon small-icon mobile-nav"></li>
+        </a>
+        <a href="/Cart/" class="link">
+          <li class="nav-link desktop-nav">Cart</li>
+          <li class="fas fa-shopping-cart icon small-icon mobile-nav"></li>
+        </a>
+      </ul>
+    </div>
+  </nav>
 </body>
 
 </html>

@@ -1,10 +1,5 @@
-/* reset css */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.link {
-  text-decoration: none;
-}
+@import "https://swift-ui-library.netlify.app/style.css";
+@import "https://fonts.googleapis.com";
+@import "https://fonts.gstatic.com";
+@import "https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400&display=swap";
+@import "/Shared/Navbar/navbar.css";
