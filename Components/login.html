@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="https://kit.fontawesome.com/f08ee55cc8.js" crossorigin="anonymous"></script>
+  <script async src="/Shared/Navbar/navbar.js"></script>
+  <link rel="stylesheet" href="/style.css">
+  <title>Login | SM</title>
+</head>
+
+<body>
+
+  <nav class="pos-sticky-t0 z-1">
+    <div class="nav pos-rel">
+      <a class="link flex-row align-center" href="/">
+        <h1 class="nav-heading primary-text">Swift Merch</h1>
+      </a>
+      <ul class="ml-auto list-style-none nav-menu">
+        <div class="nav-search-bar">
+          <input type="search" name="search" id="search-products" class="nav-search-input"
+            placeholder="search products">
+          <button class="nav-search-btn">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+
+        <div class="pos-rel">
+          <a href="#" class="link nav-dropdown-link">
+            <li class="nav-link desktop-nav">Account</li>
+            <li class="fas fa-user icon small-icon nav-dropdown-link mobile-nav"></li>
+          </a>
+          <div class="nav-dropdown pos-abs">
+            <ul class="list-style-none">
+              <a href="/Components/login.html" class="link">
+                <li class="nav-dropdown-item">Profile</li>
+              </a>
+              <a href="/Components/login.html" class="link">
+                <li class="nav-dropdown-item">Login</li>
+              </a>
+              <a href="/Components/login.html" class="link">
+                <li class="nav-dropdown-item">Logout</li>
+              </a>
+            </ul>
+          </div>
+        </div>
+        <a href="/Wishlist/" class="link">
+          <li class="nav-link desktop-nav">Wishlist</li>
+          <li class="fa fa-heart icon small-icon mobile-nav"></li>
+        </a>
+        <a href="/Cart/" class="link">
+          <li class="nav-link desktop-nav">Cart</li>
+          <li class="fas fa-shopping-cart icon small-icon mobile-nav"></li>
+        </a>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="card mw-28r p-1 my-3-5 mx-auto">
+    <h1 class="center-text my-0-5">
+      Login
+    </h1>
+    <div class="m-1">
+      <div class="pos-rel w-100p my-1-5">
+        <label for="standard-input" class="input-label pos-abs">Email</label>
+        <input type="email" class="input std-input" />
+      </div>
+      <div class="pos-rel w-100p my-1-5">
+        <label for="standard-input" class="input-label pos-abs">Password</label>
+        <input type="password" class="input std-input" />
+        <a href="/Components/resetPassword.html" class="link hover-underline">
+          <span class="sm-text my-0-25 primary-text">Forgotten Password?</span>
+        </a>
+      </div>
+      <button class="btn btn-solid-primary w-100p my-0-25 mt-1 text-bold-weight">LOGIN</button>
+      <p class="sm-text my-0-5">
+        Do not have an account yet? <a href="/Components/signUp.html"
+          class="link primary-text hover-underline">SignUp</a>
+      </p>
+    </div>
+  </main>
+</body>
+
+</html>

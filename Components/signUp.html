@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="https://kit.fontawesome.com/f08ee55cc8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/style.css">
+  <script defer src="/Shared/Navbar/navbar.js"></script>
+  <title>SignUp | SM</title>
+</head>
+
+<body>
+  <nav class="pos-sticky-t0 z-1">
+    <div class="nav pos-rel">
+      <a class="link flex-row align-center" href="/">
+        <h1 class="nav-heading primary-text">Swift Merch</h1>
+      </a>
+      <ul class="ml-auto list-style-none nav-menu">
+        <div class="nav-search-bar">
+          <input type="search" name="search" id="search-products" class="nav-search-input"
+            placeholder="search products">
+          <button class="nav-search-btn">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+
+        <div class="pos-rel">
+          <a href="#" class="link nav-dropdown-link">
+            <li class="nav-link desktop-nav">Account</li>
+            <li class="fas fa-user icon small-icon nav-dropdown-link mobile-nav"></li>
+          </a>
+          <div class="nav-dropdown pos-abs">
+            <ul class="list-style-none">
+              <a href="/Components/login.html" class="link">
+                <li class="nav-dropdown-item">Profile</li>
+              </a>
+              <a href="/Components/login.html" class="link">
+                <li class="nav-dropdown-item">Login</li>
+              </a>
+              <a href="/Components/login.html" class="link">
+                <li class="nav-dropdown-item">Logout</li>
+              </a>
+            </ul>
+          </div>
+        </div>
+        <a href="/Wishlist/" class="link">
+          <li class="nav-link desktop-nav">Wishlist</li>
+          <li class="fa fa-heart icon small-icon mobile-nav"></li>
+        </a>
+        <a href="/Cart/" class="link">
+          <li class="nav-link desktop-nav">Cart</li>
+          <li class="fas fa-shopping-cart icon small-icon mobile-nav"></li>
+        </a>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="card mw-28r p-1 my-3-5 mx-auto">
+    <h1 class="center-text my-0-5">
+      Signup
+    </h1>
+    <div class="m-1">
+      <div class="pos-rel w-100p my-1-5">
+        <label for="" class="input-label pos-abs">First Name<span class="red-text">*</span> </label>
+        <input type="text" class="input std-input" minlength="3" placeholder="Jon" />
+      </div>
+      <div class="pos-rel w-100p my-1-5">
+        <label for="" class="input-label pos-abs">Last Name<span class="red-text">*</span></label>
+        <input type="text" class="input std-input" placeholder="Doe" />
+      </div>
+      <div class="pos-rel w-100p my-1-5">
+        <label for="" class="input-label pos-abs">Email<span class="red-text">*</span></label>
+        <input type="email" class="input std-input" placeholder="abc@gmail.com" />
+      </div>
+      <div class="pos-rel w-100p my-1-5">
+        <label for="" class="input-label pos-abs">Password<span class="red-text">*</span></label>
+        <input type="password" class="input std-input" placeholder="minimum 8 characters" />
+      </div>
+      <div class="my-0-5">
+        <input type="checkbox" id="term-and-condition">
+        <label for="term-and-condition">I accept all Terms and Conditions<span class="red-text">*</span></label>
+      </div>
+      <button class="btn btn-solid-primary w-100p my-0-25 mt-1 text-bold-weight">SIGNUP</button>
+      <p class="sm-text my-0-5">
+        Alredy have an account? <a href="/Components/login.html" class="link primary-text hover-underline">Login</a>
+      </p>
+    </div>
+  </main>
+</body>
+
+</html>
