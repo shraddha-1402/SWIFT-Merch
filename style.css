@@ -8,6 +8,7 @@
 @import "/CSS/productListingPage.css";
 @import "/CSS/cart.css";
 
+/* hero section css */
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
