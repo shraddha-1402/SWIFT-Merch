@@ -1,0 +1,15 @@
+/* reset css */
+* {
+  box-sizing: border-box;
+  color: var(--black);
+}
+
+/* link css */
+.hover-underline:hover {
+  text-decoration: underline var(--primary-color) 2px;
+}
+
+/* input */
+.input::placeholder {
+  opacity: 0.6;
+}
