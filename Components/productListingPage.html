@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="https://kit.fontawesome.com/f08ee55cc8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/style.css">
+  <script async src="/Shared/Navbar/navbar.js"></script>
+  <script async src="/JS/productListingPage.js"></script>
+  <title>Products | SM</title>
+</head>
+
+<body>
+  <nav class="pos-sticky-t0 z-1">
+    <div class="nav pos-rel">
+      <a class="link flex-row align-center" href="/">
+        <h1 class="nav-heading primary-text">Swift Merch</h1>
+      </a>
+      <div class="ml-auto list-style-none nav-menu">
+        <div class="nav-search-bar">
+          <input type="search" name="search" id="search-products" class="nav-search-input"
+            placeholder="search products">
+          <button class="nav-search-btn">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+
+        <div class="pos-rel">
+          <a href="#" class="link nav-dropdown-link">
+            <li class="nav-link desktop-nav">Account</li>
+            <li class="fas fa-user icon small-icon nav-dropdown-link mobile-nav"></li>
+          </a>
+          <div class="nav-dropdown pos-abs">
+            <ul class="list-style-none">
+              <a href="/Components/login.html" class="link">
+                <li class="nav-dropdown-item">Profile</li>
+              </a>
+              <a href="/Components/login.html" class="link">
+                <li class="nav-dropdown-item">Login</li>
+              </a>
+              <a href="/Components/login.html" class="link">
+                <li class="nav-dropdown-item">Logout</li>
+              </a>
+            </ul>
+          </div>
+        </div>
+        <a href="/Wishlist/" class="link">
+          <li class="nav-link desktop-nav">Wishlist</li>
+          <li class="fa fa-heart icon small-icon mobile-nav"></li>
+        </a>
+        <a href="/Cart/" class="link">
+          <li class="nav-link desktop-nav">Cart</li>
+          <li class="fas fa-shopping-cart icon small-icon mobile-nav"></li>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-row main-content">
+    <div class="filter-sidebar hidden-for-mobile">
+      <div id="sorting-option" class="hidden-for-mobile">
+        <div class="filter-heading mb-1">
+          <p class="text-bold-weight">SORT BY</p>
+          <span class="fa fa-times icon hidden" id="close-sort-tab"></span>
+        </div>
+        <div class="filter-categories mb-1">
+          <p class="filter-title mb-0-5">PRICE</p>
+          <ul class="list-style-none">
+            <li class="text-light-weight my-0-25">
+              <input type="radio" name="price" id="price-low-high">
+              <label for="price-low-high">Price Low To High</label>
+            </li>
+            <li class="text-light-weight my-0-25">
+              <input type="radio" name="price" id="price-high-low">
+              <label for="price-high-low">Price High To Low</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="filter-option" class="hidden-for-mobile">
+        <div class="filter-heading mb-1">
+          <p class="text-bold-weight">FILTERS</p>
+          <p class="sm-text hover-underline icon">Clear All</p>
+        </div>
+        <div class="filter-categories">
+          <p class="filter-title mb-0-5">CATEGORIES</p>
+          <ul class="list-style-none">
+            <li class="text-light-weight my-0-25">
+              <input type="checkbox" name="accesory-type" id="category1">
+              <label for="category1">Music</label>
+            </li>
+            <li class="text-light-weight my-0-25">
+              <input type="checkbox" name="accesory-type" id="category2">
+              <label for="category2">T-Shirts</label>
+            </li>
+            <li class="text-light-weight my-0-25">
+              <input type="checkbox" name="accesory-type" id="category3">
+              <label for="category3">Mobile Cover</label>
+            </li>
+            <li class="text-light-weight my-0-25">
+              <input type="checkbox" name="accesory-type" id="category4">
+              <label for="category4">Hoodies</label>
+            </li>
+            <li class="text-light-weight my-0-25">
+              <input type="checkbox" name="accesory-type" id="category5">
+              <label for="category5">Other</label>
+            </li>
+          </ul>
+        </div>
+        <div class="filter-categories">
+          <p class="filter-title mb-0-5">RATING</p>
+          <ul class="list-style-none">
+            <li class="text-light-weight my-0-25">
+              <input type="radio" name="accesory-type" id="rating5">
+              <label for="rating5">More Than 4 <span class="fa fa-star rating-checked"></span></label>
+            </li>
+            <li class="text-light-weight my-0-25">
+              <input type="radio" name="accesory-type" id="rating4">
+              <label for="rating4">More Than 3 <span class="fa fa-star rating-checked"></span></label>
+            </li>
+            <li class="text-light-weight my-0-25">
+              <input type="radio" name="accesory-type" id="rating3">
+              <label for="rating3">More Than 2 <span class="fa fa-star rating-checked"></span></label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="filter-categories">
+          <p class="filter-title mb-0-5">OTHER</p>
+          <ul class="list-style-none">
+            <li class="text-light-weight my-0-25">
+              <input type="checkbox" name="accesory-type" id="other-cat">
+              <label for="other-cat">Include out of stock</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex-row gap-1 hidden">
+          <button class="btn btn-solid-secondary w-100p my-1 close-filter-tab">
+            Cancel
+          </button>
+          <button class="btn btn-outline-secondary w-100p my-1 close-filter-tab">
+            Apply
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="product-container grid-3-col-layout pos-rel">
+      <div class="card m-1 mw-16r">
+        <div class="pos-rel">
+          <span class="pos-abs card-badge-right square-badge sm-text">New</span>
+          <i class="fa fa-heart pos-abs card-badge-left icon small-icon"></i>
+          <img src="/Assets/Hoodies/hoodie2.png" alt="cd-img" class="card-img responsive-img">
+        </div>
+        <div class="flex-col gap-0-25 m-0-5">
+          <h3>Stark Light Blue Hoodie</h3>
+          <p class="sm-text">by Kurt Wagner</p>
+          <h4>Rs. 500 <span class="text-line-through text-light-weight">Rs. 750</span><span class="primary-text">
+              66% Off</span>
+          </h4>
+        </div>
+        <div class="flex-row">
+          <button class="btn btn-solid-primary w-100p m-0-5">
+            <i class="fas fa-shopping-cart mr-0-25"></i>
+            Move To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="card m-1 mw-16r">
+        <div class="pos-rel">
+          <i class="fa fa-heart pos-abs card-badge-left icon small-icon"></i>
+          <img src="/Assets/Hoodies/hoodie6.png" alt="cd-img" class="card-img responsive-img">
+        </div>
+        <div class="flex-col gap-0-25 m-0-5">
+          <h3>Stark Light Blue Hoodie</h3>
+          <p class="sm-text">by Kurt Wagner</p>
+          <h4>Rs. 500 <span class="text-line-through text-light-weight">Rs. 750</span><span class="primary-text">
+              66% Off</span>
+          </h4>
+        </div>
+        <div class="flex-row">
+          <button class="btn btn-solid-primary m-0-5 w-100p">
+            <i class="fas fa-shopping-cart mr-0-25"></i>
+            Move To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="card m-1 mw-16r">
+        <div class="pos-rel">
+          <i class="fa fa-heart pos-abs card-badge-left icon small-icon"></i>
+          <img src="/Assets/Hoodies/hoodie1.png" alt="cd-img" class="card-img responsive-img">
+        </div>
+        <div class="flex-col gap-0-25 m-0-5">
+          <h3>Stark Light Blue Hoodie</h3>
+          <p class="sm-text">by Kurt Wagner</p>
+          <h4>Rs. 500 <span class="text-line-through text-light-weight">Rs. 750</span><span class="primary-text">
+              66% Off</span>
+          </h4>
+        </div>
+        <div class="flex-row">
+          <button class="btn btn-solid-primary m-0-5 w-100p">
+            <i class="fas fa-shopping-cart mr-0-25"></i>
+            Move To Cart
+          </button>
+        </div>
+      </div>
+
+
+
+      <div class="card m-1 mw-16r">
+        <div class="pos-rel">
+          <i class="fa fa-heart pos-abs card-badge-left icon small-icon"></i>
+          <img src="/Assets/Hoodies/hoodie3.png" alt="cd-img" class="card-img responsive-img">
+        </div>
+        <div class="flex-col gap-0-25 m-0-5">
+          <h3>Stark Light Blue Hoodie</h3>
+          <p class="sm-text">by Kurt Wagner</p>
+          <h4>Rs. 500 <span class="text-line-through text-light-weight">Rs. 750</span><span class="primary-text">
+              66% Off</span>
+          </h4>
+        </div>
+        <div class="flex-row">
+          <button class="btn btn-solid-primary m-0-5 w-100p">
+            <i class="fas fa-shopping-cart mr-0-25"></i>
+            Move To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="card m-1 mw-16r">
+        <div class="pos-rel">
+          <span class="pos-abs card-badge-right square-badge sm-text">New</span>
+          <i class="fa fa-heart pos-abs card-badge-left icon small-icon"></i>
+          <img src="/Assets/Hoodies/hoodie4.png" alt="cd-img" class="card-img responsive-img">
+        </div>
+        <div class="flex-col gap-0-25 m-0-5">
+          <h3>Stark Light Blue Hoodie</h3>
+          <p class="sm-text">by Kurt Wagner</p>
+          <h4>Rs. 500 <span class="text-line-through text-light-weight">Rs. 750</span><span class="primary-text">
+              66% Off</span>
+          </h4>
+        </div>
+        <div class="flex-row">
+          <button class="btn btn-solid-primary w-100p m-0-5">
+            <i class="fas fa-shopping-cart mr-0-25"></i>
+            Move To Cart
+          </button>
+        </div>
+      </div>
+
+      <div class="card m-1 mw-16r">
+        <div class="pos-rel">
+          <i class="fa fa-heart pos-abs card-badge-left icon small-icon"></i>
+          <img src="/Assets/Hoodies/hoodie5.png" alt="cd-img" class="card-img responsive-img">
+        </div>
+        <div class="flex-col gap-0-25 m-0-5">
+          <h3>Stark Light Blue Hoodie</h3>
+          <p class="sm-text">by Kurt Wagner</p>
+          <h4>Rs. 500 <span class="text-line-through text-light-weight">Rs. 750</span><span class="primary-text">
+              66% Off</span>
+          </h4>
+        </div>
+        <div class="flex-row">
+          <button class="btn btn-solid-primary m-0-5 w-100p">
+            <i class="fas fa-shopping-cart mr-0-25"></i>
+            Move To Cart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-mobile-bottombar">
+      <button class="filter-mobile-btn" id="open-sort-tab">SORT BY</button>
+      <span class="seperator-span"></span>
+      <button class="filter-mobile-btn" id="open-filter-tab">FILTER BY</button>
+    </div>
+
+
+  </main>
+
+
+
+</body>
+
+</html>

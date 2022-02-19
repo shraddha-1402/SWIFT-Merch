@@ -4,6 +4,8 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400&display=swap";
 @import "/Shared/Navbar/navbar.css";
 @import "/Shared/common.css";
+@import "/Shared/layout.css";
+@import "/CSS/productListingPage.css";
 
 .hero {
   display: grid;
